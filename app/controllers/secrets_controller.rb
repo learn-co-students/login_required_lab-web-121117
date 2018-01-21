@@ -1,15 +1,7 @@
 class SecretsController < ApplicationController
-  before_action :require_login
-  skip_before_action :require_login, only: [:index]
-
+  before_action :require_logged_in
+  
   def show
-    
-  end
-
-  private
-
-  def require_login
-    return head(:forbidden) unless session.include?(:name)
   end
 
 end
